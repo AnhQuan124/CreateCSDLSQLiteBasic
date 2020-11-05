@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nguyễn Anh Quân"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:id="@+id/name"/>
+
+    <TextView
+        android:id="@+id/msv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1811505310140"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/name"/>
+
+    <LinearLayout
+        android:id="@+id/linearmsv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:orientation="horizontal"
+        android:background="@drawable/round_border"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/msv"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:layout_weight="2"
+            android:id="@+id/tv_msv"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:text="MSV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/round_bg"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <EditText
+            android:layout_weight="1"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ed_msv"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:orientation="horizontal"
+        android:background="@drawable/round_border"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/linearmsv"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:layout_weight="2"
+            android:id="@+id/tv_name"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:text="Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/round_bg"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <EditText
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ed_name"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearbtn"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/linearname">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Thêm"
+            android:id="@+id/btn_them"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            android:background="@drawable/round_bg"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Sửa"
+            android:id="@+id/btn_sua"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            android:background="@drawable/round_bg"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Xóa"
+            android:id="@+id/btn_xoa"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            android:background="@drawable/round_bg"/>
+
+    </LinearLayout>
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearbtn"
+        android:layout_marginTop="10dp"/>
+
+</RelativeLayout>
